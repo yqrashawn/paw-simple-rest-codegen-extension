@@ -4,5 +4,5 @@
 :CREATED:  <2018-06-06 Wed 15:30>
 :END:
 
-Codegen extension for [[https:paw.cloud][paw]].
+Codegen extension for [[https://paw.cloud][paw]].
 Combine curl extension and markdown extension, add multipart support
