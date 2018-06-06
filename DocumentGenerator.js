@@ -61,10 +61,14 @@ var DocumentGenerator = function() {
     // response
     const res = req.getLastExchange();
     if (res && res.responseBody) {
-      jsonReq.resBody =
-        "Response: \n```\n" +
-        JSON.stringify(JSON.parse(res.responseBody), null, 4) +
-        "\n```\n";
+      try {
+        jsonReq.resBody =
+          "Response: \n```\n" +
+          JSON.stringify(JSON.parse(res.responseBody), null, 4) +
+          "\n```\n";
+      } catch (err) {
+        jsonReq.resBody = "Response: \n" + res.responseBody + "\n";
+      }
     }
 
     // json body
